@@ -876,7 +876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d06be81a419004bbaf0809175dd08c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strTag: Player
+  p1: Player
+  p2: Player2
 --- !u!1 &1233236299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,7 +1082,7 @@ GameObject:
   - component: {fileID: 1631247962}
   m_Layer: 0
   m_Name: Sphere (1)
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
