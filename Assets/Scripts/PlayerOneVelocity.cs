@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class PlayerOneVelocity : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    Vector3 v3;
+
+    [SerializeField]
+    KeyCode keyPositive;
+
+    [SerializeField]
+    KeyCode keyNegative;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (Input.GetKey(keyPositive))
+            GetComponent<Rigidbody>().velocity += v3;
+        if (Input.GetKey(keyNegative))
+            GetComponent<Rigidbody>().velocity -= v3;
     }
 }
