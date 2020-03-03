@@ -11,6 +11,10 @@ public class ResetOnFloorCollison : MonoBehaviour
     [SerializeField]
     string p2;
 
+    //score for each player
+    int p1score;
+    int p2score;
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag ==  p1 || collision.collider.tag == p2) 
