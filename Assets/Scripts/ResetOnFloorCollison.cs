@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class ResetOnFloorCollison : MonoBehaviour
 {
-    [SerializeField]
-    KeyCode reset;
 
     [SerializeField]
     string capsule;

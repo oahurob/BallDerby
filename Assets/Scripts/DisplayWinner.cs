@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DisplayWinner : MonoBehaviour
 {
+    [SerializeField]
+    string capsule;
     public GameObject uiWinner1;
     public GameObject uiWinner2;
 
@@ -14,16 +16,20 @@ public class DisplayWinner : MonoBehaviour
         uiWinner2.SetActive(false);
     }
 
-    void ShowWhoWon()
+    private void OnCollisionEnter(Collision other) 
     {
-        if(KeepScoreP1.Scorep1 == 3)
+        if(other.gameObject.tag == capsule)
         {
-            uiWinner1.SetActive(true);
-        }
-        
-        if(KeepScoreP2.Scorep2 == 3)
-        {
-            uiWinner2.SetActive(true);
+
+            if(KeepScoreP1.Scorep1 == 3)
+            {
+                uiWinner1.SetActive(true);
+            }
+            
+            if(KeepScoreP2.Scorep2 == 3)
+            {
+                uiWinner2.SetActive(true);
+            }
         }
     }
 
