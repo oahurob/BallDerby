@@ -9,10 +9,7 @@ public class ResetOnFloorCollison : MonoBehaviour
     KeyCode reset;
 
     [SerializeField]
-    string p1;
-
-    [SerializeField]
-    string p2;
+    string capsule;
 
     public GameObject uiObject;
 
@@ -30,20 +27,24 @@ public class ResetOnFloorCollison : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == p1 && uiObject != null)
+        if(collision.gameObject.tag == capsule)
         {
-            uiObject.SetActive(true);
-            Destroy(uiObject2);
-            KeepScoreP1.Scorep1++;
-            StartCoroutine("WaitForSec");
+            if(CapsuleLastPush.p1Push == true && uiObject != null)
+            {
+                uiObject.SetActive(true);
+                Destroy(uiObject2);
+                KeepScoreP1.Scorep1++;
+                StartCoroutine("WaitForSec");
+            }
+            if(CapsuleLastPush.p2Push == true && uiObject2 != null)
+            {
+                uiObject2.SetActive(true);
+                Destroy(uiObject);
+                KeepScoreP2.Scorep2++;
+                StartCoroutine("WaitForSec");
+            }
         }
-        if(collision.gameObject.tag == p2 && uiObject2 != null)
-        {
-            uiObject2.SetActive(true);
-            Destroy(uiObject);
-            KeepScoreP2.Scorep2++;
-            StartCoroutine("WaitForSec");
-        }
+
     }
 
     IEnumerator WaitForSec()
