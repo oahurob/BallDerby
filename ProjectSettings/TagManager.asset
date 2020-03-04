@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Player2
   - Capsule
+  - 2W
+  - 1W
   layers:
   - Default
   - TransparentFX

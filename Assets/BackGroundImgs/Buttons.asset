@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d21f6ece3b46479f0c328f8c6007e0, type: 3}
+  m_Name: Buttons
+  m_EditorClassIdentifier: 
+  colorMode: 3
+  topLeft: {r: 0.9150943, g: 0.8236044, b: 0.31510323, a: 1}
+  topRight: {r: 0.9056604, g: 0.7907362, b: 0.28622285, a: 1}
+  bottomLeft: {r: 0.9245283, g: 0.6587889, b: 0.16135636, a: 1}
+  bottomRight: {r: 0.9622642, g: 0.8907416, b: 0.05900679, a: 1}
