@@ -30,14 +30,18 @@ public class ResetOnFloorCollison : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == p1)
+        if(collision.gameObject.tag == p1 && uiObject != null)
         {
             uiObject.SetActive(true);
+            Destroy(uiObject2);
+            KeepScoreP1.Scorep1++;
             StartCoroutine("WaitForSec");
         }
-        if(collision.gameObject.tag == p2)
+        if(collision.gameObject.tag == p2 && uiObject2 != null)
         {
             uiObject2.SetActive(true);
+            Destroy(uiObject);
+            KeepScoreP2.Scorep2++;
             StartCoroutine("WaitForSec");
         }
     }
